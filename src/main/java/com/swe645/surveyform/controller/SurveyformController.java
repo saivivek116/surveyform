@@ -16,7 +16,7 @@ public class SurveyformController {
     @Autowired
     private SurveyformService surveyformService;
     @PostMapping("/surveyresponse")
-    public Surveyformresponse printHello(@RequestBody Surveyformresponse surveyformresponse){
+    public Surveyformresponse addSurvey(@RequestBody Surveyformresponse surveyformresponse){
         return surveyformService.saveSurveyResponse(surveyformresponse);
     }
 
