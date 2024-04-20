@@ -35,6 +35,6 @@ public class SurveyformController {
     public String deleteSurveyResponse(@PathVariable("id") Long id) {
         surveyformService.deleteSurveyResponse(id);
 
-        return "Survey deleted successfully";
+        return "Survey deleted successfully.";
     }
 }
