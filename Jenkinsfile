@@ -1,3 +1,9 @@
+// This file is used to create a pipeline for the CI/CD process
+// author:
+// Sai Vivek Vangaveti - G01413358
+//  Venkata Sree Divya Kasturi - G01411963
+//  Mary Ashwitha Gopu - G01408743
+// Gangadhara Sai Kutukuppala - G01444780
 pipeline{
 	agent any
 	environment {

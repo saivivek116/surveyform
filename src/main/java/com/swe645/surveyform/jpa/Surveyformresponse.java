@@ -1,3 +1,12 @@
+/* 
+# author:
+# Sai Vivek Vangaveti - G01413358
+# Venkata Sree Divya Kasturi - G01411963
+# Mary Ashwitha Gopu - G01408743
+# Gangadhara Sai Kutukuppala - G01444780
+# functionality: JPA entity class for the survey form response
+
+*/
 package com.swe645.surveyform.jpa;
 
 import jakarta.persistence.*;
@@ -5,7 +14,6 @@ import lombok.Data;
 
 import java.sql.Date;
 import java.time.LocalDate;
-
 
 @Data
 @Entity
@@ -47,7 +55,6 @@ public class Surveyformresponse {
     public enum RecommendationLikelihood {
         VERY_LIKELY, LIKELY, UNLIKELY
     }
-
 
     @PrePersist
     public void prePersist() {

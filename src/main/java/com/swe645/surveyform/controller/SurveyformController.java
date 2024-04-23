@@ -1,3 +1,12 @@
+/* 
+# author:
+# Sai Vivek Vangaveti - G01413358
+# Venkata Sree Divya Kasturi - G01411963
+# Mary Ashwitha Gopu - G01408743
+# Gangadhara Sai Kutukuppala - G01444780
+# functionality: Controller of the spring boot app where the REST API's are defined
+
+*/
 package com.swe645.surveyform.controller;
 
 import com.swe645.surveyform.jpa.Surveyformresponse;
@@ -15,18 +24,20 @@ public class SurveyformController {
 
     @Autowired
     private SurveyformService surveyformService;
+
     @PostMapping("/surveyresponse")
-    public Surveyformresponse addSurvey(@RequestBody Surveyformresponse surveyformresponse){
+    public Surveyformresponse addSurvey(@RequestBody Surveyformresponse surveyformresponse) {
         return surveyformService.saveSurveyResponse(surveyformresponse);
     }
 
     @GetMapping("/surveyresponse")
-    public List<Surveyformresponse> fetchSurveyResponses(){
+    public List<Surveyformresponse> fetchSurveyResponses() {
         return surveyformService.fetchSurveyResponses();
     }
 
     @PutMapping("/surveyresponse/{id}")
-    public Surveyformresponse updateSurvey(@PathVariable("id") Long id, @RequestBody Surveyformresponse surveyformresponse){
+    public Surveyformresponse updateSurvey(@PathVariable("id") Long id,
+            @RequestBody Surveyformresponse surveyformresponse) {
         return surveyformService.updateSurveyResponse(id, surveyformresponse);
     }
 

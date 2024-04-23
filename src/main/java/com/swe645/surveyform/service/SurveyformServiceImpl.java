@@ -1,3 +1,12 @@
+/* 
+# author:
+# Sai Vivek Vangaveti - G01413358
+# Venkata Sree Divya Kasturi - G01411963
+# Mary Ashwitha Gopu - G01408743
+# Gangadhara Sai Kutukuppala - G01444780
+# functionality: File where the business logic for the survey form is implemented
+
+*/
 package com.swe645.surveyform.service;
 
 import com.swe645.surveyform.jpa.Surveyformresponse;
@@ -10,9 +19,10 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class SurveyformServiceImpl implements SurveyformService{
+public class SurveyformServiceImpl implements SurveyformService {
     @Autowired
     private SurveyformRepository surveyformRepository;
+
     @Override
     public Surveyformresponse saveSurveyResponse(Surveyformresponse surveyformresponse) {
         return surveyformRepository.save(surveyformresponse);
@@ -29,7 +39,7 @@ public class SurveyformServiceImpl implements SurveyformService{
     }
 
     @Override
-    public Surveyformresponse updateSurveyResponse(Long id, Surveyformresponse surveyformresponse){
+    public Surveyformresponse updateSurveyResponse(Long id, Surveyformresponse surveyformresponse) {
         Surveyformresponse sur = surveyformRepository.findById(id).get();
         if (surveyformresponse.getFirst_name() != null && !surveyformresponse.getFirst_name().isEmpty()) {
             sur.setFirst_name(surveyformresponse.getFirst_name());
